@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom'
 
+import Welcome from './Welcome/Welcome';
 import Sidebar from './Sidebar/Sidebar';
 import Cards from './Cards/Cards';
 import Navbar from './Navbar/Navbar';
@@ -12,7 +13,8 @@ export default function Layout() {
     <Router>
       <Sidebar />
         <Switch>
-          <Route exact path="/cards" component={Cards} />s
+          <Route exact path="/" component={Welcome} />
+          <Route exact path="/cards" component={Cards} />
           <Route exact path="/navbar" component={Navbar} />
           <Route exact path="/button" component={Button} />
           <Route exact path="/footer" component={Footer} />
